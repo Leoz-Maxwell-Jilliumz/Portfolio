@@ -1,14 +1,31 @@
 import { useState } from 'react'
+import { Routes, Route, Router } from 'react-router-dom'
 
 import Homepage from './pages/Homepage'
 import Navbar from './pages/Navbar';
+import About from './pages/About';
 
 function App() {
+  const hideNavbarRoutes: string[] = []
+  const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname)
   return (
     <>
-    <div className="bg-cover bg-center h-screen w-full flex flex-col justify-end items-center m-0 p-0" style={{ backgroundImage: "url('/bg.jpg')", backgroundSize: '125%', }}>
-      <Navbar />
-      <Homepage />
+    <div className="w-full flex flex-col justify-end items-center m-0 p-0" >
+      {!shouldHideNavbar && <Navbar />}
+      <Routes>
+       <Route path='/' element={
+        <>
+        <section id='Home' className="min-h-screen">
+          <Homepage />
+        </section>
+
+        <section id="Page" className="min-h-screen bg-gradient-to-b from-sky-800 via-mist-500 to-sky-800">
+          <About />
+        </section>
+
+        </>
+       }></Route>
+      </Routes>
     </div>
     </> 
   )
