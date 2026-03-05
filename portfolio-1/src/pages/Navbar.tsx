@@ -1,28 +1,29 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+
 
 function Navbar() {
     const [show, setShow] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
+    const lastScrollY = useRef(0);
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY < 50) {
                 setShow(true);
-                setLastScrollY(window.scrollY);
+                lastScrollY.current = window.scrollY;
                 return;
             }
-            if (window.scrollY > lastScrollY) {
+            if (window.scrollY > lastScrollY.current) {
                 setShow(false); // scrolling down
             } else {
                 setShow(true); // scrolling up
             }
-            setLastScrollY(window.scrollY);
+            lastScrollY.current = window.scrollY;
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [lastScrollY]);
+    }, []);
 
     // Close menu on route change or resize
     useEffect(() => {
@@ -49,8 +50,8 @@ function Navbar() {
                 </button>
                 {/* Nav links */}
                 <ul
-                    className={`flex-col md:flex-row justify-center items-center gap-2 md:gap-10 absolute md:static top-full left-0 w-full md:w-auto bg-gray-900 md:bg-transparent overflow-hidden transition-all duration-[1500ms] ease-out md:flex
-                        ${menuOpen ? 'max-h-96 opacity-100 translate-y-0 flex' : 'max-h-0 opacity-0 -translate-y-8 hidden'} md:!flex shadow-lg md:shadow-none`}
+                    className={`flex-col md:flex-row justify-center items-center gap-2 md:gap-10 absolute md:static top-full left-0 w-full md:w-auto bg-gray-900 md:bg-transparent overflow-hidden transition-all duration-[1500ms] ease-out
+                        ${menuOpen ? 'flex max-h-96 opacity-100 translate-y-0' : 'hidden max-h-0 opacity-0 -translate-y-8'} md:flex md:max-h-none md:opacity-100 md:translate-y-0 shadow-lg md:shadow-none`}
                     style={{ zIndex: 30 }}
                 >
                         <li><a href="/" className="block px-4 py-3 md:p-0 transition-all duration-400 hover:text-cyan-300 cursor-pointer text-base md:text-lg" onClick={() => setMenuOpen(false)}>Home</a></li>
