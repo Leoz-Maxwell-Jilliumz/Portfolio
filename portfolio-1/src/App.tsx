@@ -4,6 +4,7 @@ import { Routes, Route, Router } from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import Navbar from './pages/Navbar';
 import About from './pages/About';
+import Projects from './pages/Projects';
 
 function App() {
   const hideNavbarRoutes: string[] = []
@@ -19,8 +20,10 @@ function App() {
           <Homepage />
         </section>
 
-        <section id="Page" className="min-h-screen bg-gradient-to-b from-sky-800 via-mist-500 to-sky-800">
+        <section id="Page" className="min-h-screen bg-gradient-to-b from-mist-600 to-sky-600">
           <About />
+          <Projects />
+          <
         </section>
 
         </>
