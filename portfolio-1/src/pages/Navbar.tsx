@@ -54,10 +54,10 @@ function Navbar() {
                         ${menuOpen ? 'flex max-h-96 opacity-100 translate-y-0' : 'hidden max-h-0 opacity-0 -translate-y-8'} md:flex md:max-h-none md:opacity-100 md:translate-y-0 shadow-lg md:shadow-none`}
                     style={{ zIndex: 30 }}
                 >
-                        <li><a href="/" className="block px-4 py-3 md:p-0 transition-all duration-400 hover:text-cyan-300 cursor-pointer text-base md:text-lg" onClick={() => setMenuOpen(false)}>Home</a></li>
-                        <li><a href="/about" className="block px-4 py-3 md:p-0 transition-all duration-400 hover:text-cyan-300 cursor-pointer text-base md:text-lg" onClick={() => setMenuOpen(false)}>About</a></li>
-                        <li><a href="/projects" className="block px-4 py-3 md:p-0 transition-all duration-400 hover:text-cyan-300 cursor-pointer text-base md:text-lg" onClick={() => setMenuOpen(false)}>Projects</a></li>
-                        <li><a href="/contact" className="block px-4 py-3 md:p-0 transition-all duration-400 hover:text-cyan-300 cursor-pointer text-base md:text-lg" onClick={() => setMenuOpen(false)}>Contact</a></li>
+                        <li><a href="#home" className="block px-4 py-3 md:p-0 transition-all duration-400 hover:text-cyan-300 cursor-pointer text-base md:text-lg" onClick={() => setMenuOpen(false)}>Home</a></li>
+                        <li><a href="#about" className="block px-4 py-3 md:p-0 transition-all duration-400 hover:text-cyan-300 cursor-pointer text-base md:text-lg" onClick={() => setMenuOpen(false)}>About</a></li>
+                        <li><a href="#projects" className="block px-4 py-3 md:p-0 transition-all duration-400 hover:text-cyan-300 cursor-pointer text-base md:text-lg" onClick={() => setMenuOpen(false)}>Projects</a></li>
+                        <li><a href="#contact" className="block px-4 py-3 md:p-0 transition-all duration-400 hover:text-cyan-300 cursor-pointer text-base md:text-lg" onClick={() => setMenuOpen(false)}>Contact</a></li>
                 </ul>
             </div>
         </nav>
