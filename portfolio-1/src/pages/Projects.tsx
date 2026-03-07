@@ -1,3 +1,6 @@
+import Hightide from '../../public/Hightide.png';
+import Spots from '../../public/Spots.png';
+import NewsExplorer from '../../public/NewsExplorer.png';
 
 function Projects() {
     return(
@@ -8,7 +11,7 @@ function Projects() {
                     <li className="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full max-w-3xl bg-black/30 rounded-lg p-4 md:p-6">
                         <div className="m-2 md:m-4 w-full md:w-auto flex justify-center">
                             <a href="https://hightid.web.app/" className="border-none rounded-lg block hover:scale-105 transition-transform duration-300">
-                                <img src="/Hightide.png" alt="Hightide Screenshot" className="border-none rounded-lg w-full max-w-xs md:w-72 h-auto m-0" />
+                                <img src={Hightide} alt="Hightide Screenshot" className="border-none rounded-lg w-full max-w-xs md:w-72 h-auto m-0" />
                             </a>
                         </div>
                         <div className="m-2 md:m-4 flex-1 flex flex-col justify-center items-center">
@@ -19,7 +22,7 @@ function Projects() {
                     <li className="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full max-w-3xl bg-black/30 rounded-lg p-4 md:p-6">
                         <div className="m-2 md:m-4 w-full md:w-auto flex justify-center">
                             <a href="https://leoz-maxwell-jilliumz.github.io/se_project_spots/" className="border-none rounded-lg block hover:scale-105 transition-transform duration-300">
-                                <img src="./Spots.png" alt="Project 2 Screenshot" className="border-none rounded-lg w-full max-w-xs md:w-72 h-auto m-0" />
+                                <img src={Spots} alt="Project 2 Screenshot" className="border-none rounded-lg w-full max-w-xs md:w-72 h-auto m-0" />
                             </a>
                         </div>
                         <div className="m-2 md:m-4 flex-1 flex flex-col justify-center items-center">
@@ -30,7 +33,7 @@ function Projects() {
                     <li className="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full max-w-3xl bg-black/30 rounded-lg p-4 md:p-6">
                         <div className="m-2 md:m-4 w-full md:w-auto flex justify-center">
                             <a href="https://leoz-maxwell-jilliumz.github.io/news-explorer_frontend/" className="border-none rounded-lg block hover:scale-105 transition-transform duration-300">
-                                <img src="./NewsExplorer.png" alt="Project 3 Screenshot" className="border-none rounded-lg w-full max-w-xs md:w-72 h-auto m-0" />
+                                <img src={NewsExplorer} alt="Project 3 Screenshot" className="border-none rounded-lg w-full max-w-xs md:w-72 h-auto m-0" />
                             </a>
                         </div>
                         <div className="m-2 md:m-4 flex-1 flex flex-col justify-center items-center">

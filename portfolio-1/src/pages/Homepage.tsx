@@ -1,4 +1,4 @@
-
+import bgImg  from '../../public/bg.jpg';
 
 function Homepage() {
   
@@ -9,7 +9,7 @@ function Homepage() {
       <div
         className="absolute inset-0 z-0 w-full h-full bg-no-repeat bg-center bg-cover sm:bg-cover md:bg-cover lg:bg-cover xl:bg-cover"
         style={{
-          backgroundImage: "url('/bg.jpg')",
+          backgroundImage: `url(${bgImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
